@@ -115,6 +115,8 @@ nav{
   transition:background .15s !important;
 }
 .nav-cta:hover{background:var(--blue-h) !important}
+.nav-cta-full{display:inline}
+.nav-cta-short{display:none}
 
 /* Botão de tema */
 .theme-toggle{
