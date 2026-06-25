@@ -1,0 +1,181 @@
+/* ════════════════════════════════════════════════════════
+   MOBILE.CSS — Responsividade mobile-first
+   Carregado DEPOIS de styles.css.
+   styles.css define o layout padrão (desktop, >=1024px).
+   Este arquivo assume telas pequenas como base e usa
+   min-width para "destravar" o layout aos poucos conforme
+   a tela cresce — só atua abaixo de 1024px (acima disso,
+   o layout desktop de styles.css permanece intocado).
+   ════════════════════════════════════════════════════════ */
+
+@media (max-width: 1023.98px) {
+
+  /* ── BASE MOBILE (telefones pequenos, a partir de ~360px) ── */
+
+  .container,
+  .container-sm,
+  .container-xs{
+    padding:0 20px;
+  }
+
+  /* NAV */
+  .nav-inner{padding:0 16px}
+  .nav-logo{font-size:0.92rem}
+  .nav-links{gap:10px}
+  .nav-links a:not(.nav-cta):not(.theme-toggle){display:none}
+  .nav-cta{padding:7px 12px;font-size:0.78rem !important}
+
+  /* HERO */
+  .hero{padding:100px 20px 56px}
+  .hero-badge{font-size:0.66rem;padding:4px 10px;margin-bottom:24px;text-align:left}
+  .hero h1{font-size:clamp(1.9rem,8vw,2.4rem);margin-bottom:16px}
+  .hero-sub{font-size:0.92rem}
+  .hero-actions{margin-top:28px;flex-direction:column;align-items:stretch;gap:10px}
+  .hero-actions a{justify-content:center;width:100%}
+
+  /* PROOF STRIP */
+  .proof-strip{padding:32px 20px}
+  .proof-inner{flex-direction:column;gap:0}
+  .proof-item{
+    border-right:none;border-bottom:1px solid var(--border);
+    padding:16px 0;width:100%;min-width:0;
+  }
+  .proof-item:last-child{border-bottom:none}
+  .proof-num{font-size:1.45rem}
+
+  /* SECTION BASE */
+  .section{padding:56px 20px}
+  .section-h{font-size:clamp(1.4rem,6vw,1.8rem)}
+  .section-p{max-width:100%}
+
+  /* PROBLEMA */
+  .problema-grid{grid-template-columns:1fr;gap:40px}
+  .challenge-list{margin-top:28px}
+  .challenge{padding:16px 0;gap:12px}
+  .impact-card{position:static}
+  .impact-card-header{padding:16px 18px}
+  .impact-rows{padding:16px 18px}
+  .impact-footer{padding:14px 18px}
+
+  /* FEATURES */
+  .features-header{margin-bottom:40px}
+  .features-grid{grid-template-columns:1fr}
+  .feature{padding:24px 20px}
+
+  /* COMO FUNCIONA */
+  .steps-wrap{margin-top:40px}
+  .step{grid-template-columns:32px 1fr;gap:14px;padding-bottom:28px}
+  .step-num{width:28px;height:28px;font-size:0.72rem}
+
+  /* DASHBOARD MOCKUP */
+  div[style*="grid-template-columns:200px 1fr"]{
+    grid-template-columns:1fr !important;
+    min-height:auto !important;
+  }
+  .dash-sidebar{
+    padding:14px 0;
+    display:flex;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+  .dash-sidebar > div:first-child{
+    border-bottom:none !important;margin-bottom:0 !important;
+    padding:0 16px !important;display:flex;align-items:center;flex-shrink:0;
+  }
+  .dash-sidebar > div:last-child{
+    display:flex !important;flex-direction:row !important;
+    gap:6px !important;padding:0 12px !important;
+  }
+  .dash-sidebar > div:last-child > div{white-space:nowrap;flex-shrink:0}
+  .dash-main{padding:16px}
+  .dash-kpi-grid{grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px}
+  .dash-kpi{padding:12px}
+  .dash-kpi-val{font-size:1.25rem}
+  .dash-row{padding:10px 12px;gap:8px;flex-wrap:wrap}
+  .dash-time{width:34px;font-size:0.66rem}
+
+  /* CASES */
+  .cases-header{margin-bottom:36px}
+  .cases-grid{grid-template-columns:1fr;gap:14px}
+  .case-card{padding:22px}
+
+  /* PLANOS */
+  .planos-header{margin-bottom:36px}
+  .planos-grid{grid-template-columns:1fr;gap:16px}
+  .plano-featured{margin:0}
+  .plano{padding:24px}
+
+  /* FAQ */
+  .faq-wrap{margin-top:36px}
+  .faq-q{font-size:0.86rem;padding:16px 0;gap:10px}
+  .faq-a{font-size:0.82rem}
+
+  /* SOBRE / FUNDADOR */
+  #sobre .container-sm > div{
+    grid-template-columns:1fr !important;
+    text-align:center;gap:24px !important;
+  }
+  #sobre .container-sm > div > div:first-child{
+    display:flex;flex-direction:column;align-items:center;
+  }
+  #sobre .container-sm > div > div:last-child > div:last-child{
+    justify-content:center;
+  }
+
+  /* CTA FINAL */
+  .cta-section{padding:56px 20px}
+  .cta-section .hero-actions{flex-direction:column;align-items:stretch}
+
+  /* FOOTER */
+  footer > div{padding:40px 20px 24px !important}
+  footer > div > div:first-child{
+    grid-template-columns:1fr !important;gap:32px;
+    padding-bottom:32px !important;
+  }
+  footer > div > div:last-child{
+    flex-direction:column;align-items:flex-start !important;gap:6px;
+  }
+
+  /* ── TELAS UM POUCO MAIORES (a partir de ~481px) ── */
+  @media (min-width:481px){
+    .hero-actions{flex-direction:row;align-items:center}
+    .hero-actions a{width:auto}
+    .proof-inner{flex-direction:row}
+    .proof-item{
+      flex:1 1 45%;border-right:none;
+      border-bottom:1px solid var(--border);
+    }
+    .dash-kpi-grid{grid-template-columns:repeat(4,1fr)}
+    .cta-section .hero-actions{flex-direction:row;align-items:center}
+  }
+
+  /* ── TABLETS (a partir de ~768px) ── */
+  @media (min-width:768px){
+    .container,.container-sm,.container-xs{padding:0 32px}
+    .nav-inner{padding:0 32px}
+    .hero{padding:128px 32px 80px}
+    .section{padding:80px 32px}
+    .proof-strip{padding:40px 32px}
+    .proof-inner{flex-direction:row}
+    .proof-item{border-right:1px solid var(--border);border-bottom:none}
+    .proof-item:last-child{border-right:none}
+    .problema-grid{grid-template-columns:1fr 1fr;gap:48px}
+    .impact-card{position:sticky;top:80px}
+    .features-grid{grid-template-columns:repeat(2,1fr)}
+    .cases-grid{grid-template-columns:repeat(2,1fr)}
+    .planos-grid{grid-template-columns:1fr}
+    footer > div > div:first-child{grid-template-columns:1.6fr 1fr 1fr !important}
+    footer > div > div:last-child{flex-direction:row !important;align-items:center !important}
+    #sobre .container-sm > div{
+      grid-template-columns:auto 1fr !important;text-align:left;
+    }
+    #sobre .container-sm > div > div:first-child{display:block}
+    #sobre .container-sm > div > div:last-child > div:last-child{justify-content:flex-start}
+    div[style*="grid-template-columns:200px 1fr"]{
+      grid-template-columns:180px 1fr !important;
+    }
+    .dash-sidebar{display:block;overflow-x:visible}
+    .dash-sidebar > div:first-child{padding:0 14px 16px !important;border-bottom:1px solid #1E293B !important;margin-bottom:14px !important}
+    .dash-sidebar > div:last-child{flex-direction:column !important;padding:0 8px !important}
+  }
+}

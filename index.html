@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AtendêHub'z — Automatize confirmações e reduza faltas no seu negócio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="mobile.css">
+<!-- Aplica tema antes do render para evitar flash -->
+<script>
+  (function(){
+    var s=localStorage.getItem('atendeehubz-theme');
+    if(s) document.documentElement.setAttribute('data-theme',s);
+  })();
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Atend<span>ê</span>Hub'z</div>
+    <div class="nav-links">
+      <a href="#produto">Produto</a>
+      <a href="#sistema">Sistema</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#planos">Planos</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+        <!-- Lua: modo escuro -->
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <!-- Sol: modo claro -->
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a href="#contato" class="nav-cta">Demonstração gratuita</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">
+    <span class="hero-badge-dot"></span>
+    Automação para negócios locais da Baixada Santista
+  </div>
+  <h1>Automatize confirmações e <span>reduza faltas</span> no seu negócio</h1>
+  <p class="hero-sub">Confirmações por WhatsApp, lembretes automáticos e acompanhamento em tempo real para empresas da Baixada Santista.</p>
+  <div class="hero-actions">
+    <a href="#contato" class="btn-primary">Solicitar diagnóstico gratuito</a>
+    <a href="#como-funciona" class="btn-ghost">Ver como funciona</a>
+  </div>
+</section>
+
+<!-- PROOF STRIP -->
+<div class="proof-strip">
+  <div class="proof-inner" style="max-width:860px">
+    <div class="proof-item">
+      <div class="proof-num">48h</div>
+      <div class="proof-label">Do contrato ao sistema funcionando</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-num">API oficial</div>
+      <div class="proof-label">WhatsApp Business — mensagens pelo seu número</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-num">Sem fidelidade</div>
+      <div class="proof-label">Cancela quando quiser, sem multa</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEMA -->
+<section class="section" id="produto">
+  <div class="container">
+    <div class="problema-grid">
+      <div>
+        <div class="section-tag">O desafio</div>
+        <h2 class="section-h">Sua equipe deveria<br>atender clientes — não<br>confirmar horários</h2>
+        <p class="section-p">Todo dia, horas de trabalho vão embora em ligações, mensagens e anotações que poderiam ser automáticas. Enquanto isso, clientes faltam sem avisar e a agenda fica com buracos.</p>
+        <div class="challenge-list">
+          <div class="challenge">
+            <div class="challenge-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg></div>
+            <div class="challenge-text">
+              <h4>Confirmações no braço</h4>
+              <p>A recepcionista liga, manda mensagem, anota. 2 a 3 horas por dia em tarefas que não precisam de ninguém.</p>
+            </div>
+          </div>
+          <div class="challenge">
+            <div class="challenge-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div class="challenge-text">
+              <h4>Ausências geram horários ociosos</h4>
+              <p>Sem lembrete estruturado, entre 15% e 25% dos agendamentos viram buracos na agenda — e receita perdida.</p>
+            </div>
+          </div>
+          <div class="challenge">
+            <div class="challenge-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+            <div class="challenge-text">
+              <h4>Invisível no Google</h4>
+              <p>Sem site, o negócio depende só de indicação. Quem busca no Google não encontra — e vai para o concorrente.</p>
+            </div>
+          </div>
+          <div class="challenge">
+            <div class="challenge-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+            <div class="challenge-text">
+              <h4>Sem números para tomar decisão</h4>
+              <p>Quantos clientes faltaram essa semana? Qual horário tem mais cancelamento? Sem painel, não tem como saber.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-card-header">
+          <div class="dot dot-r"></div>
+          <div class="dot dot-y"></div>
+          <div class="dot dot-g"></div>
+          <span class="impact-card-title">Diagnóstico — Antes da automação</span>
+        </div>
+        <div class="impact-rows">
+          <div class="impact-row">
+            <div class="impact-row-label">Taxa de ausência (faltas)</div>
+            <div class="impact-bar-wrap"><div class="impact-bar bar-red"></div></div>
+            <div class="impact-row-val">22% dos agendamentos</div>
+          </div>
+          <div class="impact-row">
+            <div class="impact-row-label">Tempo de equipe em tarefas manuais</div>
+            <div class="impact-bar-wrap"><div class="impact-bar bar-yellow"></div></div>
+            <div class="impact-row-val">~2,5 horas por dia</div>
+          </div>
+          <div class="impact-row">
+            <div class="impact-row-label">Capacidade ociosa da agenda</div>
+            <div class="impact-bar-wrap"><div class="impact-bar bar-red" style="width:60%"></div></div>
+            <div class="impact-row-val">18% dos horários disponíveis</div>
+          </div>
+          <div class="impact-row">
+            <div class="impact-row-label">Leads via busca orgânica (Google)</div>
+            <div class="impact-bar-wrap"><div class="impact-bar bar-green"></div></div>
+            <div class="impact-row-val">Baixo ou nenhum</div>
+          </div>
+        </div>
+        <div class="impact-footer">
+          <p>Com confirmação automática, negócios da região relatam menos buracos na agenda e equipes que voltam a focar no atendimento presencial.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTO / FEATURES -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="features-header">
+      <div class="section-tag">Plataforma</div>
+      <h2 class="section-h">O que o sistema faz<br>no dia a dia</h2>
+      <p class="section-p">Seis coisas que sua equipe para de fazer na mão a partir do primeiro dia.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Confirmação pelo WhatsApp da empresa</h3>
+        <p>A mensagem sai do número oficial do seu negócio — não de um número desconhecido. O cliente confirma ou cancela respondendo.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+        <h3>Lembretes em sequência</h3>
+        <p>48h e 2h antes do horário. Configurável por tipo de serviço. Sem intervenção da equipe.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
+        <h3>Cancelamento aciona a lista de espera</h3>
+        <p>Quando alguém cancela, o próximo da fila recebe o convite automaticamente. O horário não fica vazio.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <h3>Site com agendamento online</h3>
+        <p>Aparece no Google quando alguém busca pelo serviço na sua cidade. Clientes agendam sem precisar ligar.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <h3>Painel de acompanhamento</h3>
+        <p>Confirmados, pendentes e cancelados em uma tela. A equipe vê o dia em tempo real — sem planilha, sem papelada.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+        <h3>Funciona com o que você já usa</h3>
+        <p>Agenda no papel, Google Agenda ou sistema próprio — a AtendêHub'z se encaixa. Implementação em 48h, treinamento incluso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section" id="como-funciona">
+  <div class="container-sm">
+    <div class="section-tag">Funcionamento</div>
+    <h2 class="section-h">Como funciona<br>na prática</h2>
+    <div class="steps-wrap">
+      <div class="step">
+        <div class="step-left"><div class="step-num">1</div><div class="step-line"></div></div>
+        <div class="step-content">
+          <h3>Cliente agenda pelo canal que preferir</h3>
+          <p>Site, WhatsApp ou diretamente na sua agenda. Nenhuma mudança no processo atual.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-num">2</div><div class="step-line"></div></div>
+        <div class="step-content">
+          <h3>Sistema envia confirmação automática</h3>
+          <p>Mensagem personalizada com data e horário. O cliente responde para confirmar ou cancelar — sem ligar, sem e-mail.</p>
+          <span class="step-tag">Pelo número oficial do seu negócio</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-num">3</div><div class="step-line"></div></div>
+        <div class="step-content">
+          <h3>Equipe acompanha no painel</h3>
+          <p>Confirmados, pendentes e cancelados em tempo real. A equipe toca só nos casos que precisam de atenção.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-num">4</div><div class="step-line"></div></div>
+        <div class="step-content">
+          <h3>Cancelamento? Próximo da fila entra</h3>
+          <p>A lista de espera é acionada automaticamente. O horário não fica em branco.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD MOCKUP -->
+<section class="section section-alt" id="sistema">
+  <div class="container">
+    <div class="features-header">
+      <div class="section-tag">Sistema</div>
+      <h2 class="section-h">Veja como fica na prática</h2>
+      <p class="section-p">Painel simples, direto ao ponto. Sua equipe acompanha confirmações e agendamentos em tempo real — sem precisar de treinamento técnico.</p>
+    </div>
+
+    <!-- Dashboard mockup -->
+    <div style="max-width:900px;margin:0 auto;border:1px solid var(--border);border-radius:var(--r3);overflow:hidden;box-shadow:var(--shadow-l)">
+      <!-- Window chrome -->
+      <div style="background:#1E293B;padding:12px 16px;display:flex;align-items:center;gap:8px">
+        <span style="width:12px;height:12px;border-radius:50%;background:#FF5F57;display:inline-block"></span>
+        <span style="width:12px;height:12px;border-radius:50%;background:#FEBC2E;display:inline-block"></span>
+        <span style="width:12px;height:12px;border-radius:50%;background:#28C840;display:inline-block"></span>
+        <span style="margin-left:12px;font-size:0.72rem;color:#64748B;font-family:monospace">app.atendeehubz.com.br — Painel</span>
+      </div>
+      <!-- Dashboard body -->
+      <div class="dash-body" style="display:grid;grid-template-columns:200px 1fr;min-height:480px">
+        <!-- Sidebar (sempre escuro — é o design do app simulado) -->
+        <div class="dash-sidebar">
+          <div style="padding:0 16px 20px;border-bottom:1px solid #1E293B;margin-bottom:16px">
+            <span style="font-size:0.85rem;font-weight:600;color:#F8FAFC;letter-spacing:-0.01em">Atend<span style="color:#3B82F6">ê</span>Hub'z</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;padding:0 8px">
+            <div style="padding:8px 10px;border-radius:6px;background:#1E3A5F;display:flex;align-items:center;gap:8px">
+              <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E2E8F0" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span><span style="font-size:0.78rem;color:#F8FAFC;font-weight:500">Dashboard</span>
+            </div>
+            <div style="padding:8px 10px;border-radius:6px;display:flex;align-items:center;gap:8px">
+              <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><span style="font-size:0.78rem;color:#CBD5E1">Agenda</span>
+            </div>
+            <div style="padding:8px 10px;border-radius:6px;display:flex;align-items:center;gap:8px">
+              <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span style="font-size:0.78rem;color:#CBD5E1">WhatsApp</span>
+            </div>
+            <div style="padding:8px 10px;border-radius:6px;display:flex;align-items:center;gap:8px">
+              <span>📈</span><span style="font-size:0.78rem;color:#CBD5E1">Relatórios</span>
+            </div>
+            <div style="padding:8px 10px;border-radius:6px;display:flex;align-items:center;gap:8px">
+              <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span><span style="font-size:0.78rem;color:#CBD5E1">Configurações</span>
+            </div>
+          </div>
+        </div>
+        <!-- Main content -->
+        <div class="dash-main">
+          <!-- Header row -->
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+            <div>
+              <div class="dash-header-title">Hoje — sexta-feira</div>
+              <div class="dash-header-sub">12 agendamentos · 9 confirmados · 2 pendentes · 1 cancelado</div>
+            </div>
+            <div style="background:#2563EB;color:#fff;font-size:0.75rem;font-weight:600;padding:6px 14px;border-radius:6px;cursor:pointer">+ Novo agendamento</div>
+          </div>
+          <!-- KPI cards -->
+          <div class="dash-kpi-grid">
+            <div class="dash-kpi">
+              <div class="dash-kpi-label">Confirmados</div>
+              <div class="dash-kpi-val">9</div>
+              <div style="font-size:0.68rem;color:#10B981;margin-top:4px">↑ 75% da agenda</div>
+            </div>
+            <div class="dash-kpi">
+              <div class="dash-kpi-label">Pendentes</div>
+              <div style="font-size:1.5rem;font-weight:600;color:#F59E0B;letter-spacing:-0.03em;line-height:1">2</div>
+              <div style="font-size:0.68rem;color:var(--muted);margin-top:4px">Aguardando resposta</div>
+            </div>
+            <div class="dash-kpi">
+              <div class="dash-kpi-label">Cancelados</div>
+              <div style="font-size:1.5rem;font-weight:600;color:#EF4444;letter-spacing:-0.03em;line-height:1">1</div>
+              <div style="font-size:0.68rem;color:#10B981;margin-top:4px">Lista de espera ativa</div>
+            </div>
+            <div class="dash-kpi">
+              <div class="dash-kpi-label">Msg enviadas</div>
+              <div class="dash-kpi-val">18</div>
+              <div style="font-size:0.68rem;color:#10B981;margin-top:4px">98% entregues</div>
+            </div>
+          </div>
+          <!-- Agenda list -->
+          <div class="dash-agenda-wrap">
+            <div class="dash-agenda-head">
+              <span class="dash-agenda-title">Agenda do dia</span>
+              <span style="font-size:0.68rem;color:#2563EB;font-weight:500;cursor:pointer">Ver tudo</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-time">09:00</div>
+              <div style="width:8px;height:8px;border-radius:50%;background:#10B981;flex-shrink:0"></div>
+              <div style="flex:1">
+                <div class="dash-client-name">Maria Fernanda S.</div>
+                <div class="dash-client-sub">Consulta · 50min</div>
+              </div>
+              <div style="font-size:0.68rem;background:#DCFCE7;color:#166534;padding:3px 8px;border-radius:100px;font-weight:600">Confirmado</div>
+            </div>
+            <div class="dash-row">
+              <div class="dash-time">10:00</div>
+              <div style="width:8px;height:8px;border-radius:50%;background:#10B981;flex-shrink:0"></div>
+              <div style="flex:1">
+                <div class="dash-client-name">João C. Melo</div>
+                <div class="dash-client-sub">Retorno · 30min</div>
+              </div>
+              <div style="font-size:0.68rem;background:#DCFCE7;color:#166534;padding:3px 8px;border-radius:100px;font-weight:600">Confirmado</div>
+            </div>
+            <div class="dash-row">
+              <div class="dash-time">11:30</div>
+              <div style="width:8px;height:8px;border-radius:50%;background:#F59E0B;flex-shrink:0"></div>
+              <div style="flex:1">
+                <div class="dash-client-name">Ana Paula R.</div>
+                <div class="dash-client-sub">Avaliação · 40min</div>
+              </div>
+              <div style="font-size:0.68rem;background:#FEF9C3;color:#854D0E;padding:3px 8px;border-radius:100px;font-weight:600">Pendente</div>
+            </div>
+            <div class="dash-row">
+              <div class="dash-time">14:00</div>
+              <div style="width:8px;height:8px;border-radius:50%;background:#EF4444;flex-shrink:0"></div>
+              <div style="flex:1">
+                <div class="dash-client-cancelled">Carlos M. Souza</div>
+                <div class="dash-client-sub-cancelled">Consulta · 50min — cancelado</div>
+              </div>
+              <div style="font-size:0.68rem;background:#FEE2E2;color:#991B1B;padding:3px 8px;border-radius:100px;font-weight:600">Cancelado</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section section-alt" id="casos">
+  <div class="container">
+    <div class="cases-header">
+      <div class="section-tag">Para quem é</div>
+      <h2 class="section-h">Pensado para negócios<br>da Baixada Santista</h2>
+      <p class="section-p" style="max-width:560px">A AtendêHub'z nasceu em Praia Grande para ajudar pequenos e médios negócios a reduzir tarefas manuais e melhorar o atendimento ao cliente. Atendemos empresas em Praia Grande, Santos, São Vicente e região.</p>
+    </div>
+    <div class="cases-grid">
+      <div class="case-card">
+        <div class="case-top">
+          <div class="case-industry">Clínicas e consultórios</div>
+          <div class="case-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+        </div>
+        <p style="font-size:0.895rem;color:var(--ink-3);line-height:1.7">A recepcionista para de confirmar consulta por telefone. O paciente recebe o lembrete e confirma pelo WhatsApp. Falta sem aviso vira exceção, não regra.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-top">
+          <div class="case-industry">Pet shops</div>
+          <div class="case-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10c-1.5 1-3 3.5-2.5 6 .3 1.4 1.5 2 2.5 2h6c1 0 2.2-.6 2.5-2 .5-2.5-1-5-2.5-6L12 8 9 10z"/><circle cx="4" cy="16" r="2"/></svg></div>
+        </div>
+        <p style="font-size:0.895rem;color:var(--ink-3);line-height:1.7">Banho e tosa têm horário marcado. O cliente recebe aviso no dia anterior. Quem costumava esquecer começa a chegar na hora — e a voltar.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-top">
+          <div class="case-industry">Imobiliárias</div>
+          <div class="case-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        </div>
+        <p style="font-size:0.895rem;color:var(--ink-3);line-height:1.7">Lead entra pelo WhatsApp às 22h. O sistema responde na hora, confirma o interesse e agenda a visita. O corretor acorda com a reunião já marcada.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-top">
+          <div class="case-industry">Restaurantes</div>
+          <div class="case-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><line x1="7" y1="2" x2="7" y2="22"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></div>
+        </div>
+        <p style="font-size:0.895rem;color:var(--ink-3);line-height:1.7">Reserva entra pelo site ou WhatsApp. O cliente recebe confirmação e lembrete no dia. Mesa vazia por no-show deixa de ser problema no fim de semana.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section class="section" id="planos">
+  <div class="container">
+    <div class="planos-header">
+      <div class="section-tag">Planos</div>
+      <h2 class="section-h">Preços transparentes,<br>sem taxas ocultas</h2>
+      <p class="section-p">Todos os planos incluem implementação e treinamento. A mensalidade cobre suporte contínuo e atualizações.</p>
+    </div>
+    <div class="planos-grid">
+      <div class="plano">
+        <div class="plano-tier">Starter</div>
+        <div class="plano-price">R$600</div>
+        <div class="plano-price-note">setup único · sem mensalidade</div>
+        <div class="plano-desc">Para negócios que querem começar com automação de WhatsApp e medir resultados antes de expandir.</div>
+        <ul class="plano-features">
+          <li><div class="check">✓</div>Confirmação automática via WhatsApp</li>
+          <li><div class="check">✓</div>Lembretes de agendamento</li>
+          <li><div class="check">✓</div>Painel básico de confirmações</li>
+          <li><div class="check">✓</div>Treinamento da equipe</li>
+          <li><div class="check">✓</div>Suporte por 30 dias</li>
+        </ul>
+        <a href="#contato" class="plano-btn plano-btn-outline">Começar com Starter</a>
+      </div>
+
+      <div class="plano plano-featured">
+        <div class="plano-featured-badge">Mais utilizado</div>
+        <div class="plano-tier">Professional</div>
+        <div class="plano-price">R$1.200</div>
+        <div class="plano-price-note">setup único + R$200/mês</div>
+        <div class="plano-desc">Solução completa: automação de WhatsApp, site profissional e presença no Google.</div>
+        <ul class="plano-features">
+          <li><div class="check">✓</div>Tudo do plano Starter</li>
+          <li><div class="check">✓</div>Site profissional com agendamento online</li>
+          <li><div class="check">✓</div>Otimização para Google (SEO local)</li>
+          <li><div class="check">✓</div>Integração com Google Maps</li>
+          <li><div class="check">✓</div>Reagendamento automático</li>
+          <li><div class="check">✓</div>Relatório mensal de desempenho</li>
+          <li><div class="check">✓</div>Suporte contínuo</li>
+        </ul>
+        <a href="#contato" class="plano-btn plano-btn-blue">Começar com Professional</a>
+      </div>
+
+      <div class="plano">
+        <div class="plano-tier">Business</div>
+        <div class="plano-price">R$2.000</div>
+        <div class="plano-price-note">setup único + R$300/mês</div>
+        <div class="plano-desc">Para negócios que buscam crescimento ativo: captação de novos clientes e inteligência operacional.</div>
+        <ul class="plano-features">
+          <li><div class="check">✓</div>Tudo do plano Professional</li>
+          <li><div class="check">✓</div>Captação ativa de novos clientes</li>
+          <li><div class="check">✓</div>Integração com Google Ads</li>
+          <li><div class="check">✓</div>Automação de reativação de clientes</li>
+          <li><div class="check">✓</div>Relatórios avançados com ROI</li>
+          <li><div class="check">✓</div>Suporte prioritário 7 dias/semana</li>
+        </ul>
+        <a href="#contato" class="plano-btn plano-btn-outline">Começar com Business</a>
+      </div>
+    </div>
+    <p class="planos-note">Todos os planos incluem implementação em até 48h e treinamento da equipe. Sem fidelidade obrigatória.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt">
+  <div class="container-sm">
+    <div class="section-tag">Perguntas frequentes</div>
+    <h2 class="section-h">Dúvidas comuns</h2>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <div class="faq-q">
+          Preciso mudar minha agenda ou sistema atual?
+          <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-a">Não. A plataforma se integra ao seu fluxo existente — WhatsApp, agenda física ou digital. Nenhuma mudança operacional é necessária para começar.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          Quanto tempo leva para o sistema estar funcionando?
+          <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-a">A implementação padrão é concluída em 48 horas. Inclui configuração, integração com seu WhatsApp Business e treinamento de 30 minutos com a equipe.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          As mensagens saem do número da minha empresa?
+          <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-a">Sim. Utilizamos a API oficial do WhatsApp Business, então todas as mensagens são enviadas pelo número da sua empresa, com o nome e foto do seu negócio.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          Existe fidelidade ou contrato mínimo?
+          <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-a">Não há fidelidade contratual. A mensalidade pode ser cancelada a qualquer momento, sem multas ou burocracia.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          Em quanto tempo vejo resultado?
+          <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-a">As confirmações automáticas começam nas primeiras 24h após a implementação. A redução de faltas é perceptível na primeira semana. O site leva entre 2 e 4 semanas para indexar no Google.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FUNDADOR -->
+<section class="section" id="sobre">
+  <div class="container-sm">
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;max-width:680px">
+      <!-- Photo -->
+      <div style="flex-shrink:0">
+        <div style="width:120px;height:120px;border-radius:50%;background:var(--surface-2);border:2px solid var(--border);overflow:hidden">
+          <img src="/assets/perfil.png" alt="Matheus Soares Rothje" style="width:100%;height:100%;object-fit:cover">
+        </div>
+      </div>
+      <!-- Text -->
+      <div>
+        <div class="section-tag">Quem está por trás</div>
+        <h2 class="section-h" style="font-size:1.4rem;margin-bottom:12px">Matheus Soares Rothje</h2>
+        <p style="font-size:0.935rem;color:var(--muted);line-height:1.8;margin-bottom:16px">Sou desenvolvedor Full Stack com foco em Python e especialidade em automações — movido a cafeína e boas ideias. Minha relação com a programação começou na infância, mas o que realmente me conquistou foi perceber que programar é, essencialmente, criar algo do zero.</p>
+        <p style="font-size:0.935rem;color:var(--muted);line-height:1.8;margin-bottom:20px">Criei a AtendêHub'z depois de ver de perto como clínicas, pet shops e pequenos negócios da nossa região perdiam tempo e clientes por falta de automação simples. Transformar uma ideia em algo funcional, real e útil é o que me motiva todos os dias.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="https://wa.me/5513978115599" class="founder-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Falar com o Matheus
+          </a>
+          <a href="https://github.com/Matheus-Soares-Rothje" target="_blank" rel="noopener" class="founder-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section" id="contato">
+  <h2>Quero ver a AtendêHub'z<br>funcionando no meu negócio</h2>
+  <p>Agende uma demonstração gratuita de 30 minutos. Mostramos o sistema em funcionamento e como ele se encaixaria na sua operação.</p>
+  <div class="hero-actions">
+    <a href="https://wa.me/5513978115599" class="btn-primary">Agendar demonstração gratuita</a>
+    <a href="mailto:justmattzzzofc@gmail.com" class="btn-ghost">Enviar e-mail</a>
+  </div>
+  <p class="cta-note">Resposta em até 2 horas em dias úteis · Praia Grande, Santos e região</p>
+</section>
+
+<footer>
+  <div style="max-width:1120px;margin:0 auto;padding:48px 32px 32px;width:100%">
+    <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid var(--border)">
+      <!-- Brand col -->
+      <div>
+        <div class="footer-logo" style="font-size:1.1rem;margin-bottom:12px">Atend<span>ê</span>Hub'z</div>
+        <p style="font-size:0.845rem;color:var(--muted);line-height:1.75;max-width:280px">Automação de atendimento para negócios locais. Confirmações por WhatsApp, lembretes automáticos e presença digital.</p>
+        <p style="font-size:0.78rem;color:var(--muted-2);margin-top:16px">Praia Grande &bull; Santos &bull; São Vicente</p>
+      </div>
+      <!-- Links col -->
+      <div>
+        <p style="font-size:0.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:16px">Produto</p>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="#produto" style="font-size:0.845rem;color:var(--muted)">Como funciona</a>
+          <a href="#sistema" style="font-size:0.845rem;color:var(--muted)">O sistema</a>
+          <a href="#planos" style="font-size:0.845rem;color:var(--muted)">Planos e preços</a>
+          <a href="#sobre" style="font-size:0.845rem;color:var(--muted)">Sobre a AtendêHub'z</a>
+        </div>
+      </div>
+      <!-- Contact col -->
+      <div>
+        <p style="font-size:0.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:16px">Contato</p>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="https://wa.me/5513978115599" style="font-size:0.845rem;color:var(--muted)">WhatsApp: +55 (13) 97811-5599</a>
+          <a href="mailto:justmattzzzofc@gmail.com" style="font-size:0.845rem;color:var(--muted)">justmattzzzofc@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom bar -->
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding-top:24px">
+      <p style="font-size:0.75rem;color:var(--muted-2)">© 2026 AtendêHub'z. Todos os direitos reservados.</p>
+      <p style="font-size:0.75rem;color:var(--muted-2)">Praia Grande, SP — Brasil</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
