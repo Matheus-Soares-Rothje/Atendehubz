@@ -34,7 +34,7 @@
         <!-- Sol: modo claro -->
         <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
       </button>
-      <a href="#contato" class="nav-cta">Demonstração gratuita</a>
+      <a href="#contato" class="nav-cta"><span class="nav-cta-full">Demonstração gratuita</span><span class="nav-cta-short">Demonstração</span></a>
     </div>
   </div>
 </nav>
@@ -245,7 +245,7 @@
         <span style="width:12px;height:12px;border-radius:50%;background:#FF5F57;display:inline-block"></span>
         <span style="width:12px;height:12px;border-radius:50%;background:#FEBC2E;display:inline-block"></span>
         <span style="width:12px;height:12px;border-radius:50%;background:#28C840;display:inline-block"></span>
-        <span style="margin-left:12px;font-size:0.72rem;color:#64748B;font-family:monospace">app.atendeehubz.com.br — Painel</span>
+        <span class="dash-chrome-url" style="margin-left:12px;font-size:0.72rem;color:#64748B;font-family:monospace">app.atendeehubz.com.br — Painel</span>
       </div>
       <!-- Dashboard body -->
       <div class="dash-body" style="display:grid;grid-template-columns:200px 1fr;min-height:480px">
@@ -275,12 +275,12 @@
         <!-- Main content -->
         <div class="dash-main">
           <!-- Header row -->
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
-            <div>
+          <div class="dash-header-row" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;gap:12px">
+            <div class="dash-header-titles">
               <div class="dash-header-title">Hoje — sexta-feira</div>
               <div class="dash-header-sub">12 agendamentos · 9 confirmados · 2 pendentes · 1 cancelado</div>
             </div>
-            <div style="background:#2563EB;color:#fff;font-size:0.75rem;font-weight:600;padding:6px 14px;border-radius:6px;cursor:pointer">+ Novo agendamento</div>
+            <div class="dash-new-btn" style="background:#2563EB;color:#fff;font-size:0.75rem;font-weight:600;padding:6px 14px;border-radius:6px;cursor:pointer;flex-shrink:0;white-space:nowrap">+ Novo agendamento</div>
           </div>
           <!-- KPI cards -->
           <div class="dash-kpi-grid">
